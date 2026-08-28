@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import json
 import logging
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -21,7 +21,7 @@ SAMPLES_DIR = Path("data/samples")
 
 def _audit_block(endpoint_name: str, page: Page, run_id: str) -> dict[str, Any]:
     return {
-        "ingest_ts": datetime.now(timezone.utc).isoformat(),
+        "ingest_ts": datetime.now(UTC).isoformat(),
         "endpoint": endpoint_name,
         "source_url": page.source_url,
         "page_number": page.page_number,

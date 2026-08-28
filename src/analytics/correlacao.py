@@ -83,8 +83,7 @@ def comparativo_frente_vs_partido(silver: dict[str, pd.DataFrame]) -> pd.DataFra
                                   .agg(lambda s: s.value_counts().idxmax() if len(s) else None)
                                   .reset_index(name="partido_majoritario"))
 
-    # alinhamento do partido majoritario
-    ali_partido = df_p.set_index("sigla_partido")["alinhamento"]
+    # alinhamento medio do partido majoritario
     media_partido_pelo_majoritario = (df_p.groupby("sigla_partido")["alinhamento"].mean()
                                           .reset_index(name="alinhamento_partido_majoritario")
                                           .rename(columns={"sigla_partido": "partido_majoritario"}))

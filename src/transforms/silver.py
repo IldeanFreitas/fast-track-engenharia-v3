@@ -12,7 +12,8 @@ Aplica em ordem:
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
+from contextlib import suppress
+from datetime import UTC, datetime
 from pathlib import Path
 
 import pandas as pd
@@ -76,7 +77,7 @@ def to_silver(name: str, run_id: str = "local") -> pd.DataFrame:
         df = df.drop_duplicates(subset=pk, keep="last").reset_index(drop=True)
 
     # auditoria silver
-    df["silver_ingest_ts"] = datetime.now(timezone.utc)
+    df["silver_ingest_ts"] = datetime.now(UTC)
     df["run_id"] = run_id
     if payload_hash is not None:
         df["payload_hash"] = payload_hash[: len(df)].reset_index(drop=True)
@@ -88,8 +89,6 @@ def to_silver_all(run_id: str = "local") -> dict[str, pd.DataFrame]:
     """Roda silver para todas as entidades cujo bronze existe."""
     out: dict[str, pd.DataFrame] = {}
     for name in RENAMES:
-        try:
+        with suppress(FileNotFoundError):
             out[name] = to_silver(name, run_id=run_id)
-        except FileNotFoundError:
-            pass
     return out

@@ -1,6 +1,6 @@
 # Câmara dos Deputados — Pipeline Lakehouse
 
-[![tests](https://github.com/ildeanmaster-dot/fast-track-engenharia-v3/actions/workflows/tests.yml/badge.svg)](https://github.com/ildeanmaster-dot/fast-track-engenharia-v3/actions/workflows/tests.yml)
+[![tests](https://github.com/IldeanFreitas/fast-track-engenharia-v3/actions/workflows/tests.yml/badge.svg)](https://github.com/IldeanFreitas/fast-track-engenharia-v3/actions/workflows/tests.yml)
 [![python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)](https://www.python.org/)
 [![databricks](https://img.shields.io/badge/databricks-Premium-orange)](https://www.databricks.com/)
 
@@ -14,6 +14,7 @@ final do programa **Upskill Tiller — Engenharia de Dados, T2**.
 - [Visão geral](#visão-geral)
 - [Entregáveis](#entregáveis)
 - [Arquitetura](#arquitetura)
+- [Apresentações](#apresentações)
 - [Quickstart local](#quickstart-local)
 - [Quickstart Databricks](#quickstart-databricks)
 - [Estrutura](#estrutura)
@@ -29,6 +30,15 @@ Roda em três modos:
 - **Pandas local** — iteração rápida, CI sem cluster.
 - **PySpark local** — paridade com Databricks usando Delta open-source.
 - **Databricks Premium** — Unity Catalog + Volumes + Workflows.
+
+## Apresentações
+
+- [Versão resumida](apresentacao/Apresentacao_Resumida.pptx) — visão executiva
+  do problema, arquitetura, entregáveis e próximos passos.
+- [Versão completa](apresentacao/Apresentacao_Completa.pptx) — detalhamento da
+  solução, modelagem e decisões técnicas.
+- [Estrutura do projeto](apresentacao/estrutura_projeto.svg) — visão visual dos
+  principais componentes do repositório.
 
 ## Entregáveis
 

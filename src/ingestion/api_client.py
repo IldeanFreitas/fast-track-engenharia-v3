@@ -14,7 +14,7 @@ import re
 import time
 from collections.abc import Iterator
 from dataclasses import dataclass, field
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from typing import Any
 from urllib.parse import parse_qs, urlparse
 
@@ -151,7 +151,7 @@ class CamaraAPIClient:
                 records=records or [],
                 source_url=response.url,
                 page_number=page_num,
-                fetched_at_iso=datetime.now(timezone.utc).isoformat(),
+                fetched_at_iso=datetime.now(UTC).isoformat(),
                 extras={"links": body.get("links", []) if isinstance(body, dict) else []},
             )
 
