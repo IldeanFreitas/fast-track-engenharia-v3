@@ -5,7 +5,6 @@ import pytest
 from src.quality import expectations as exp_mod
 from src.quality.cnpj import flag_suspeitos, limpa_cnpj, valida_cnpj
 
-
 # ---- CNPJ ----
 
 def test_limpa_cnpj():

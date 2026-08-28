@@ -1,7 +1,7 @@
 """Tests do carregamento e validacao do catalogo."""
 import pytest
 
-from src.utils.config_loader import EndpointConfig, VALID_INCREMENTALS, load
+from src.utils.config_loader import VALID_INCREMENTALS, EndpointConfig, load
 
 
 def test_load_basico():
@@ -32,7 +32,7 @@ def test_pks_definidas():
 
 def test_fanouts_apontam_para_pais_existentes():
     cfg = load("conf/endpoints.yaml")
-    for name, ep in cfg.endpoints.items():
+    for _name, ep in cfg.endpoints.items():
         if ep.fanout_from:
             assert ep.fanout_from in cfg.endpoints
 

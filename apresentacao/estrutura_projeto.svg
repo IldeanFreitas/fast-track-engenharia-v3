@@ -1,0 +1,313 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="2070" viewBox="0 0 1680 2070" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#93a1b5"/></marker>
+<linearGradient id="gflow" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#cd7f32"/><stop offset="0.5" stop-color="#cbd5e1"/><stop offset="1" stop-color="#fbbf24"/></linearGradient>
+<linearGradient id="ghead" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#fb923c"/></linearGradient>
+</defs>
+<rect x="0" y="0" width="1680" height="2070" rx="0" fill="#0b0f17" opacity="1.0"/>
+<text x="48" y="62" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#e6edf3" text-anchor="start" opacity="1.0">Câmara dos Deputados — Pipeline Lakehouse</text>
+<text x="50" y="92" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">Modelagem da estrutura end-to-end · arquitetura medalhão (Bronze → Silver → Gold) sobre os Dados Abertos da Câmara</text>
+<rect x="1514.4" y="42" width="107.6" height="26" rx="13" fill="none" stroke="#a78bfa" stroke-width="1.3" opacity="1.0"/>
+<text x="1568.2" y="59" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#a78bfa" text-anchor="middle" opacity="1.0">Time Travel</text>
+<rect x="1381.6000000000001" y="42" width="122.8" height="26" rx="13" fill="none" stroke="#34d399" stroke-width="1.3" opacity="1.0"/>
+<text x="1443.0000000000002" y="59" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#34d399" text-anchor="middle" opacity="1.0">Unity Catalog</text>
+<rect x="1302.0000000000002" y="42" width="69.6" height="26" rx="13" fill="none" stroke="#22d3ee" stroke-width="1.3" opacity="1.0"/>
+<text x="1336.8000000000002" y="59" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#22d3ee" text-anchor="middle" opacity="1.0">pandas</text>
+<rect x="1214.8000000000002" y="42" width="77.19999999999999" height="26" rx="13" fill="none" stroke="#fb923c" stroke-width="1.3" opacity="1.0"/>
+<text x="1253.4" y="59" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#fb923c" text-anchor="middle" opacity="1.0">PySpark</text>
+<rect x="1104.8000000000002" y="42" width="100.0" height="26" rx="13" fill="none" stroke="#fbbf24" stroke-width="1.3" opacity="1.0"/>
+<text x="1154.8000000000002" y="59" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#fbbf24" text-anchor="middle" opacity="1.0">Delta Lake</text>
+<line x1="48" y1="112" x2="1632" y2="112" stroke="#283344" stroke-width="1" opacity="1.0"/>
+<text x="48" y="132" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#22d3ee" text-anchor="start" opacity="1.0">1 · Fluxo end-to-end</text>
+<text x="232" y="132" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">da API à camada analítica, com qualidade e auditoria atravessando o pipeline</text>
+<rect x="48.0" y="168" width="296" height="196" rx="16" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<rect x="48.0" y="168" width="296" height="6" rx="3" fill="#22d3ee" opacity="1.0"/>
+<text x="68.0" y="208" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#e6edf3" text-anchor="start" opacity="1.0">API Câmara</text>
+<text x="68.0" y="228" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#22d3ee" text-anchor="start" letter-spacing="1.2" opacity="1.0">FONTE</text>
+<circle cx="72.0" cy="252" r="3" fill="#22d3ee"/>
+<text x="84.0" y="256" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">17 endpoints REST v2</text>
+<circle cx="72.0" cy="276" r="3" fill="#22d3ee"/>
+<text x="84.0" y="280" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">paginação Link rel=next</text>
+<circle cx="72.0" cy="300" r="3" fill="#22d3ee"/>
+<text x="84.0" y="304" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">fanouts 1:N (filhos)</text>
+<circle cx="72.0" cy="324" r="3" fill="#22d3ee"/>
+<text x="84.0" y="328" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">rate-limit 180 RPM</text>
+<line x1="350.0" y1="266.0" x2="364.0" y2="266.0" stroke="#93a1b5" stroke-width="2.4" marker-end="url(#arrow)" opacity="1.0"/>
+<rect x="370.0" y="168" width="296" height="196" rx="16" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<rect x="370.0" y="168" width="296" height="6" rx="3" fill="#cd7f32" opacity="1.0"/>
+<text x="390.0" y="208" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#e6edf3" text-anchor="start" opacity="1.0">Bronze</text>
+<text x="390.0" y="228" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#cd7f32" text-anchor="start" letter-spacing="1.2" opacity="1.0">RAW + AUDITORIA</text>
+<circle cx="394.0" cy="252" r="3" fill="#cd7f32"/>
+<text x="406.0" y="256" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">Delta / JSONL (raw)</text>
+<circle cx="394.0" cy="276" r="3" fill="#cd7f32"/>
+<text x="406.0" y="280" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">payload bruto preservado</text>
+<circle cx="394.0" cy="300" r="3" fill="#cd7f32"/>
+<text x="406.0" y="304" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">colunas _audit.*</text>
+<circle cx="394.0" cy="324" r="3" fill="#cd7f32"/>
+<text x="406.0" y="328" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">_payload_hash SHA-256</text>
+<line x1="672.0" y1="266.0" x2="686.0" y2="266.0" stroke="#93a1b5" stroke-width="2.4" marker-end="url(#arrow)" opacity="1.0"/>
+<rect x="692.0" y="168" width="296" height="196" rx="16" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<rect x="692.0" y="168" width="296" height="6" rx="3" fill="#cbd5e1" opacity="1.0"/>
+<text x="712.0" y="208" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#e6edf3" text-anchor="start" opacity="1.0">Silver</text>
+<text x="712.0" y="228" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#cbd5e1" text-anchor="start" letter-spacing="1.2" opacity="1.0">LIMPO + CONFORMADO</text>
+<circle cx="716.0" cy="252" r="3" fill="#cbd5e1"/>
+<text x="728.0" y="256" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">rename snake_case</text>
+<circle cx="716.0" cy="276" r="3" fill="#cbd5e1"/>
+<text x="728.0" y="280" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">tipagem explícita (UTC)</text>
+<circle cx="716.0" cy="300" r="3" fill="#cbd5e1"/>
+<text x="728.0" y="304" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">dedup por PK</text>
+<circle cx="716.0" cy="324" r="3" fill="#cbd5e1"/>
+<text x="728.0" y="328" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">SCD2 + flatten aninhados</text>
+<line x1="994.0" y1="266.0" x2="1008.0" y2="266.0" stroke="#93a1b5" stroke-width="2.4" marker-end="url(#arrow)" opacity="1.0"/>
+<rect x="1014.0" y="168" width="296" height="196" rx="16" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<rect x="1014.0" y="168" width="296" height="6" rx="3" fill="#fbbf24" opacity="1.0"/>
+<text x="1034.0" y="208" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#e6edf3" text-anchor="start" opacity="1.0">Gold</text>
+<text x="1034.0" y="228" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#fbbf24" text-anchor="start" letter-spacing="1.2" opacity="1.0">MODELADO</text>
+<circle cx="1038.0" cy="252" r="3" fill="#fbbf24"/>
+<text x="1050.0" y="256" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">Star schema</text>
+<circle cx="1038.0" cy="276" r="3" fill="#fbbf24"/>
+<text x="1050.0" y="280" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">7 dimensões + 4 fatos</text>
+<circle cx="1038.0" cy="300" r="3" fill="#fbbf24"/>
+<text x="1050.0" y="304" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">+ ~30 tabelas gold_*</text>
+<circle cx="1038.0" cy="324" r="3" fill="#fbbf24"/>
+<text x="1050.0" y="328" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">marts por entregável</text>
+<line x1="1316.0" y1="266.0" x2="1330.0" y2="266.0" stroke="#93a1b5" stroke-width="2.4" marker-end="url(#arrow)" opacity="1.0"/>
+<rect x="1336.0" y="168" width="296" height="196" rx="16" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<rect x="1336.0" y="168" width="296" height="6" rx="3" fill="#fb923c" opacity="1.0"/>
+<text x="1356.0" y="208" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#e6edf3" text-anchor="start" opacity="1.0">Analytics</text>
+<text x="1356.0" y="228" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#fb923c" text-anchor="start" letter-spacing="1.2" opacity="1.0">PRODUTOS DE DADOS</text>
+<circle cx="1360.0" cy="252" r="3" fill="#fb923c"/>
+<text x="1372.0" y="256" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">6 entregáveis obrigatórios</text>
+<circle cx="1360.0" cy="276" r="3" fill="#fb923c"/>
+<text x="1372.0" y="280" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">+ 2 opcionais</text>
+<circle cx="1360.0" cy="300" r="3" fill="#fb923c"/>
+<text x="1372.0" y="304" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">streaming + CDC SCD2</text>
+<circle cx="1360.0" cy="324" r="3" fill="#fb923c"/>
+<text x="1372.0" y="328" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">queries de validação</text>
+<rect x="370.0" y="390" width="623.0" height="64" rx="12" fill="#161d2a" stroke="#34d399" stroke-width="1.3" opacity="1.0"/>
+<text x="388.0" y="416" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#34d399" text-anchor="start" letter-spacing="1" opacity="1.0">QUALIDADE</text>
+<text x="388.0" y="438" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">CNPJ (validação DV + heurística multi-UF) · expectations · z-score de anomalias</text>
+<rect x="1009.0" y="390" width="623.0" height="64" rx="12" fill="#161d2a" stroke="#a78bfa" stroke-width="1.3" opacity="1.0"/>
+<text x="1027.0" y="416" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#a78bfa" text-anchor="start" letter-spacing="1" opacity="1.0">AUDITORIA &amp; LINHAGEM</text>
+<text x="1027.0" y="438" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">ingest_ts · source_url · page_number · run_id · payload_hash (rastreável até a URL)</text>
+<line x1="518.0" y1="364" x2="518.0" y2="390" stroke="#283344" stroke-width="1.2" stroke-dasharray="3 4" opacity="1.0"/>
+<line x1="840.0" y1="364" x2="840.0" y2="390" stroke="#283344" stroke-width="1.2" stroke-dasharray="3 4" opacity="1.0"/>
+<line x1="1162.0" y1="364" x2="1162.0" y2="390" stroke="#283344" stroke-width="1.2" stroke-dasharray="3 4" opacity="1.0"/>
+<line x1="1484.0" y1="364" x2="1484.0" y2="390" stroke="#283344" stroke-width="1.2" stroke-dasharray="3 4" opacity="1.0"/>
+<text x="48" y="512" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#22d3ee" text-anchor="start" opacity="1.0">2 · Ingestão fora do cluster</text>
+<text x="360" y="512" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">a coleta na API roda em worker leve; o cluster pesado só processa Bronze→Gold</text>
+<rect x="48" y="536" width="384" height="132" rx="14" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<rect x="48" y="536" width="5" height="132" rx="2" fill="#22d3ee" opacity="1.0"/>
+<text x="68" y="568" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3" text-anchor="start" opacity="1.0">Worker leve</text>
+<text x="68" y="588" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="12.5" font-weight="600" fill="#22d3ee" text-anchor="start" opacity="1.0">src/ingestion/</text>
+<circle cx="72" cy="610" r="2.6" fill="#22d3ee"/>
+<text x="84" y="614" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">cliente HTTP + tenacity (retry exp.)</text>
+<circle cx="72" cy="631" r="2.6" fill="#22d3ee"/>
+<text x="84" y="635" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">rate-limit · paginação · state JSON</text>
+<circle cx="72" cy="652" r="2.6" fill="#22d3ee"/>
+<text x="84" y="656" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">bate na API — segundos, sem cluster</text>
+<line x1="440" y1="602.0" x2="494" y2="602.0" stroke="#93a1b5" stroke-width="2.4" marker-end="url(#arrow)" opacity="1.0"/>
+<rect x="502" y="536" width="384" height="132" rx="14" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<rect x="502" y="536" width="5" height="132" rx="2" fill="#34d399" opacity="1.0"/>
+<text x="522" y="568" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3" text-anchor="start" opacity="1.0">Object Storage</text>
+<text x="522" y="588" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="12.5" font-weight="600" fill="#34d399" text-anchor="start" opacity="1.0">Volume UC / samples</text>
+<circle cx="526" cy="610" r="2.6" fill="#34d399"/>
+<text x="538" y="614" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">zona de entrega (landing)</text>
+<circle cx="526" cy="631" r="2.6" fill="#34d399"/>
+<text x="538" y="635" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">JSONL versionado p/ o Repo</text>
+<circle cx="526" cy="652" r="2.6" fill="#34d399"/>
+<text x="538" y="656" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">desacopla coleta de processamento</text>
+<line x1="894" y1="602.0" x2="948" y2="602.0" stroke="#93a1b5" stroke-width="2.4" marker-end="url(#arrow)" opacity="1.0"/>
+<rect x="956" y="536" width="384" height="132" rx="14" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<rect x="956" y="536" width="5" height="132" rx="2" fill="#fb923c" opacity="1.0"/>
+<text x="976" y="568" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#e6edf3" text-anchor="start" opacity="1.0">Cluster pesado</text>
+<text x="976" y="588" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="12.5" font-weight="600" fill="#fb923c" text-anchor="start" opacity="1.0">notebooks 02–06</text>
+<circle cx="980" cy="610" r="2.6" fill="#fb923c"/>
+<text x="992" y="614" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">PySpark nativo no Databricks</text>
+<circle cx="980" cy="631" r="2.6" fill="#fb923c"/>
+<text x="992" y="635" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">Bronze → Silver → Gold → Analytics</text>
+<circle cx="980" cy="652" r="2.6" fill="#fb923c"/>
+<text x="992" y="656" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.2" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">liga só quando há trabalho</text>
+<rect x="1364" y="536" width="268" height="132" rx="14" fill="#161d2a" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<text x="1380" y="564" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#fb923c" text-anchor="start" letter-spacing="1.2" opacity="1.0">POR QUÊ</text>
+<text x="1380" y="586" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.8" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">Custo: cluster ligado é caro</text>
+<text x="1380" y="607" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.8" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">Segurança: egress restrito</text>
+<text x="1380" y="628" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.8" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">Acoplamento: API fora não trava</text>
+<text x="1380" y="649" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.8" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">Observabilidade: orquestrador próprio</text>
+<text x="48" y="726" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#22d3ee" text-anchor="start" opacity="1.0">3 · Modelo dimensional (Gold)</text>
+<text x="420" y="726" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">star schema: 4 fatos no centro, 7 dimensões conformadas + tabela ponte proposições</text>
+<rect x="48" y="746" width="1584" height="430" rx="16" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<line x1="200" y1="832" x2="470" y2="832" stroke="#283344" stroke-width="1.4" opacity="0.9"/>
+<line x1="470" y1="832" x2="330" y2="961.0" stroke="#283344" stroke-width="1.4" opacity="0.9"/>
+<line x1="470" y1="832" x2="700" y2="961.0" stroke="#283344" stroke-width="1.4" opacity="0.9"/>
+<line x1="470" y1="832" x2="1050" y2="961.0" stroke="#283344" stroke-width="1.4" opacity="0.9"/>
+<line x1="330" y1="1106" x2="330" y2="961.0" stroke="#283344" stroke-width="1.4" opacity="0.9"/>
+<line x1="760" y1="832" x2="700" y2="961.0" stroke="#283344" stroke-width="1.4" opacity="0.9"/>
+<line x1="980" y1="832" x2="700" y2="961.0" stroke="#283344" stroke-width="1.4" opacity="0.9"/>
+<line x1="1230" y1="832" x2="1050" y2="961.0" stroke="#283344" stroke-width="1.4" opacity="0.9"/>
+<line x1="1410" y1="1106" x2="1410" y2="961.0" stroke="#283344" stroke-width="1.4" opacity="0.9"/>
+<line x1="760" y1="1106" x2="330" y2="961.0" stroke="#283344" stroke-width="1.4" opacity="0.9"/>
+<line x1="760" y1="1106" x2="700" y2="961.0" stroke="#283344" stroke-width="1.4" opacity="0.9"/>
+<line x1="760" y1="1106" x2="1050" y2="961.0" stroke="#283344" stroke-width="1.4" opacity="0.9"/>
+<line x1="760" y1="1106" x2="1410" y2="961.0" stroke="#283344" stroke-width="1.4" opacity="0.9"/>
+<rect x="112.0" y="807.0" width="176" height="50" rx="11" fill="#0e1a1f" stroke="#22d3ee" stroke-width="1.5" opacity="1.0"/>
+<text x="200" y="837" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="13.5" font-weight="600" fill="#22d3ee" text-anchor="middle" opacity="1.0">dim_partido</text>
+<rect x="382.0" y="807.0" width="176" height="50" rx="11" fill="#0e1a1f" stroke="#22d3ee" stroke-width="1.5" opacity="1.0"/>
+<text x="470" y="837" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="13.5" font-weight="600" fill="#22d3ee" text-anchor="middle" opacity="1.0">dim_deputado</text>
+<rect x="672.0" y="807.0" width="176" height="50" rx="11" fill="#0e1a1f" stroke="#22d3ee" stroke-width="1.5" opacity="1.0"/>
+<text x="760" y="837" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="13.5" font-weight="600" fill="#22d3ee" text-anchor="middle" opacity="1.0">dim_evento</text>
+<rect x="892.0" y="807.0" width="176" height="50" rx="11" fill="#0e1a1f" stroke="#22d3ee" stroke-width="1.5" opacity="1.0"/>
+<text x="980" y="837" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="13.5" font-weight="600" fill="#22d3ee" text-anchor="middle" opacity="1.0">dim_orgao</text>
+<rect x="1142.0" y="807.0" width="176" height="50" rx="11" fill="#0e1a1f" stroke="#22d3ee" stroke-width="1.5" opacity="1.0"/>
+<text x="1230" y="837" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="13.5" font-weight="600" fill="#22d3ee" text-anchor="middle" opacity="1.0">dim_fornecedor</text>
+<rect x="242.0" y="1081.0" width="176" height="50" rx="11" fill="#0e1a1f" stroke="#22d3ee" stroke-width="1.5" opacity="1.0"/>
+<text x="330" y="1111" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="13.5" font-weight="600" fill="#22d3ee" text-anchor="middle" opacity="1.0">dim_frente</text>
+<rect x="672.0" y="1081.0" width="176" height="50" rx="11" fill="#0e1a1f" stroke="#a78bfa" stroke-width="1.5" opacity="1.0"/>
+<text x="760" y="1111" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="13.5" font-weight="600" fill="#a78bfa" text-anchor="middle" opacity="1.0">dim_data</text>
+<rect x="1322.0" y="1081.0" width="176" height="50" rx="11" fill="#0e1a1f" stroke="#f472b6" stroke-width="1.5" opacity="1.0"/>
+<text x="1410" y="1111" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="13.5" font-weight="600" fill="#f472b6" text-anchor="middle" opacity="1.0">proposicoes</text>
+<rect x="225.0" y="929.0" width="210" height="64" rx="12" fill="#241a12" stroke="#fb923c" stroke-width="1.7" opacity="1.0"/>
+<text x="330" y="957.0" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="15.5" font-weight="700" fill="#fb923c" text-anchor="middle" opacity="1.0">fato_voto</text>
+<text x="330" y="976.0" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#93a1b5" text-anchor="middle" opacity="1.0">grão: votação × deputado</text>
+<rect x="595.0" y="929.0" width="210" height="64" rx="12" fill="#241a12" stroke="#fb923c" stroke-width="1.7" opacity="1.0"/>
+<text x="700" y="957.0" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="15.5" font-weight="700" fill="#fb923c" text-anchor="middle" opacity="1.0">fato_presenca</text>
+<text x="700" y="976.0" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#93a1b5" text-anchor="middle" opacity="1.0">grão: evento × deputado</text>
+<rect x="945.0" y="929.0" width="210" height="64" rx="12" fill="#241a12" stroke="#fb923c" stroke-width="1.7" opacity="1.0"/>
+<text x="1050" y="957.0" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="15.5" font-weight="700" fill="#fb923c" text-anchor="middle" opacity="1.0">fato_despesa</text>
+<text x="1050" y="976.0" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#93a1b5" text-anchor="middle" opacity="1.0">grão: deputado × documento</text>
+<rect x="1305.0" y="929.0" width="210" height="64" rx="12" fill="#241a12" stroke="#fb923c" stroke-width="1.7" opacity="1.0"/>
+<text x="1410" y="957.0" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="15.5" font-weight="700" fill="#fb923c" text-anchor="middle" opacity="1.0">fato_tramitacao</text>
+<text x="1410" y="976.0" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#93a1b5" text-anchor="middle" opacity="1.0">grão: proposição × sequência</text>
+<rect x="72" y="1134" width="80" height="24" rx="12" fill="none" stroke="#fb923c" stroke-width="1.3" opacity="1.0"/>
+<text x="112.0" y="1150" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#fb923c" text-anchor="middle" opacity="1.0">■ Fato</text>
+<rect x="168" y="1134" width="110" height="24" rx="12" fill="none" stroke="#22d3ee" stroke-width="1.3" opacity="1.0"/>
+<text x="223.0" y="1150" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#22d3ee" text-anchor="middle" opacity="1.0">■ Dimensão</text>
+<rect x="290" y="1134" width="110" height="24" rx="12" fill="none" stroke="#a78bfa" stroke-width="1.3" opacity="1.0"/>
+<text x="345.0" y="1150" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#a78bfa" text-anchor="middle" opacity="1.0">■ Dim. data</text>
+<rect x="412" y="1134" width="86" height="24" rx="12" fill="none" stroke="#f472b6" stroke-width="1.3" opacity="1.0"/>
+<text x="455.0" y="1150" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#f472b6" text-anchor="middle" opacity="1.0">■ Ponte</text>
+<text x="48" y="1232" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#22d3ee" text-anchor="start" opacity="1.0">4 · Entregáveis analíticos</text>
+<text x="360" y="1232" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">6 obrigatórios + 2 opcionais — cada um materializa tabelas gold_*</text>
+<rect x="48.0" y="1254" width="378" height="176" rx="14" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<rect x="48.0" y="1254" width="378" height="5" rx="2" fill="#fb923c" opacity="1.0"/>
+<circle cx="86.0" cy="1298" r="17" fill="#fb923c" opacity="0.16"/>
+<circle cx="86.0" cy="1298" r="17" fill="none" stroke="#fb923c" stroke-width="1.6"/>
+<text x="86.0" y="1303.5" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#fb923c" text-anchor="middle" opacity="1.0">1</text>
+<text x="116.0" y="1304" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#e6edf3" text-anchor="start" opacity="1.0">Atlas das frentes</text>
+<text x="72.0" y="1340" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">HHI por frente, sobreposição entre frentes</text>
+<text x="72.0" y="1360" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">opostas, deputados em N frentes, evolução por</text>
+<text x="72.0" y="1380" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">legislatura.</text>
+<rect x="450.0" y="1254" width="378" height="176" rx="14" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<rect x="450.0" y="1254" width="378" height="5" rx="2" fill="#fb923c" opacity="1.0"/>
+<circle cx="488.0" cy="1298" r="17" fill="#fb923c" opacity="0.16"/>
+<circle cx="488.0" cy="1298" r="17" fill="none" stroke="#fb923c" stroke-width="1.6"/>
+<text x="488.0" y="1303.5" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#fb923c" text-anchor="middle" opacity="1.0">2</text>
+<text x="518.0" y="1304" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#e6edf3" text-anchor="start" opacity="1.0">Calendário de eventos</text>
+<text x="474.0" y="1340" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">Taxa de presença por deputado/tipo, densidade</text>
+<text x="474.0" y="1360" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">semanal, semanas vazias, eventos futuros.</text>
+<rect x="852.0" y="1254" width="378" height="176" rx="14" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<rect x="852.0" y="1254" width="378" height="5" rx="2" fill="#fb923c" opacity="1.0"/>
+<circle cx="890.0" cy="1298" r="17" fill="#fb923c" opacity="0.16"/>
+<circle cx="890.0" cy="1298" r="17" fill="none" stroke="#fb923c" stroke-width="1.6"/>
+<text x="890.0" y="1303.5" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#fb923c" text-anchor="middle" opacity="1.0">3</text>
+<text x="920.0" y="1304" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#e6edf3" text-anchor="start" opacity="1.0">Correlação frente × votação</text>
+<text x="876.0" y="1340" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">Alinhamento médio dentro de frentes vs. dentro</text>
+<text x="876.0" y="1360" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">de partidos, por votação.</text>
+<rect x="1254.0" y="1254" width="378" height="176" rx="14" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<rect x="1254.0" y="1254" width="378" height="5" rx="2" fill="#fb923c" opacity="1.0"/>
+<circle cx="1292.0" cy="1298" r="17" fill="#fb923c" opacity="0.16"/>
+<circle cx="1292.0" cy="1298" r="17" fill="none" stroke="#fb923c" stroke-width="1.6"/>
+<text x="1292.0" y="1303.5" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#fb923c" text-anchor="middle" opacity="1.0">4</text>
+<text x="1322.0" y="1304" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#e6edf3" text-anchor="start" opacity="1.0">Raio-X CEAP</text>
+<text x="1278.0" y="1340" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">Z-score por categoria × UF, ranking de</text>
+<text x="1278.0" y="1360" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">fornecedores, flag de CNPJ suspeito (DV +</text>
+<text x="1278.0" y="1380" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">multi-UF).</text>
+<rect x="48.0" y="1452" width="378" height="176" rx="14" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<rect x="48.0" y="1452" width="378" height="5" rx="2" fill="#fb923c" opacity="1.0"/>
+<circle cx="86.0" cy="1496" r="17" fill="#fb923c" opacity="0.16"/>
+<circle cx="86.0" cy="1496" r="17" fill="none" stroke="#fb923c" stroke-width="1.6"/>
+<text x="86.0" y="1501.5" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#fb923c" text-anchor="middle" opacity="1.0">5</text>
+<text x="116.0" y="1502" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#e6edf3" text-anchor="start" opacity="1.0">Auditoria de CPIs</text>
+<text x="72.0" y="1538" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">Catálogo, duração vs. prazo regimental,</text>
+<text x="72.0" y="1558" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">produtividade (com relatório vs. sem).</text>
+<rect x="450.0" y="1452" width="378" height="176" rx="14" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<rect x="450.0" y="1452" width="378" height="5" rx="2" fill="#fb923c" opacity="1.0"/>
+<circle cx="488.0" cy="1496" r="17" fill="#fb923c" opacity="0.16"/>
+<circle cx="488.0" cy="1496" r="17" fill="none" stroke="#fb923c" stroke-width="1.6"/>
+<text x="488.0" y="1501.5" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#fb923c" text-anchor="middle" opacity="1.0">6</text>
+<text x="518.0" y="1502" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#e6edf3" text-anchor="start" opacity="1.0">Engajamento parlamentar</text>
+<text x="474.0" y="1538" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">Score composto (presenças × votos × discursos)</text>
+<text x="474.0" y="1558" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">com percentil partidário e nacional.</text>
+<rect x="852.0" y="1452" width="378" height="176" rx="14" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<rect x="852.0" y="1452" width="378" height="5" rx="2" fill="#a78bfa" opacity="1.0"/>
+<circle cx="890.0" cy="1496" r="17" fill="#a78bfa" opacity="0.16"/>
+<circle cx="890.0" cy="1496" r="17" fill="none" stroke="#a78bfa" stroke-width="1.6"/>
+<text x="890.0" y="1501.5" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#a78bfa" text-anchor="middle" opacity="1.0">7</text>
+<text x="920.0" y="1502" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#e6edf3" text-anchor="start" opacity="1.0">Streaming de votações</text>
+<text x="876.0" y="1538" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">OPCIONAL · micro-batch a cada 10 min,</text>
+<text x="876.0" y="1558" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">classificação de urgência e SLA dashboard.</text>
+<text x="1212.0" y="1612" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#a78bfa" text-anchor="end" opacity="1.0">opcional</text>
+<rect x="1254.0" y="1452" width="378" height="176" rx="14" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<rect x="1254.0" y="1452" width="378" height="5" rx="2" fill="#a78bfa" opacity="1.0"/>
+<circle cx="1292.0" cy="1496" r="17" fill="#a78bfa" opacity="0.16"/>
+<circle cx="1292.0" cy="1496" r="17" fill="none" stroke="#a78bfa" stroke-width="1.6"/>
+<text x="1292.0" y="1501.5" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#a78bfa" text-anchor="middle" opacity="1.0">8</text>
+<text x="1322.0" y="1502" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="16.5" font-weight="700" fill="#e6edf3" text-anchor="start" opacity="1.0">CDC de tramitação</text>
+<text x="1278.0" y="1538" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">OPCIONAL · SCD2 (valid_from/to/is_current),</text>
+<text x="1278.0" y="1558" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.6" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">alertas de Plenário e arquivamento.</text>
+<text x="1614.0" y="1612" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#a78bfa" text-anchor="end" opacity="1.0">opcional</text>
+<text x="48" y="1690" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="21" font-weight="700" fill="#22d3ee" text-anchor="start" opacity="1.0">5 · Estratégias incrementais · modos de execução · stack</text>
+<rect x="48" y="1712" width="560" height="210" rx="14" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<text x="66" y="1742" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#34d399" text-anchor="start" letter-spacing="1" opacity="1.0">ESTRATÉGIAS INCREMENTAIS</text>
+<rect x="66" y="1755" width="176" height="22" rx="11" fill="#0e1a1f" stroke="#34d399" stroke-width="1.2" opacity="1.0"/>
+<text x="154" y="1770" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="12" font-weight="600" fill="#34d399" text-anchor="middle" opacity="1.0">snapshot</text>
+<text x="254" y="1770" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">substitui tudo — listas pequenas/estáveis</text>
+<rect x="66" y="1785" width="176" height="22" rx="11" fill="#0e1a1f" stroke="#34d399" stroke-width="1.2" opacity="1.0"/>
+<text x="154" y="1800" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="12" font-weight="600" fill="#34d399" text-anchor="middle" opacity="1.0">append</text>
+<text x="254" y="1800" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">só adiciona novos — eventos imutáveis</text>
+<rect x="66" y="1815" width="176" height="22" rx="11" fill="#0e1a1f" stroke="#34d399" stroke-width="1.2" opacity="1.0"/>
+<text x="154" y="1830" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="12" font-weight="600" fill="#34d399" text-anchor="middle" opacity="1.0">append_watermark</text>
+<text x="254" y="1830" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">adiciona via coluna temporal (despesas)</text>
+<rect x="66" y="1845" width="176" height="22" rx="11" fill="#0e1a1f" stroke="#34d399" stroke-width="1.2" opacity="1.0"/>
+<text x="154" y="1860" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="12" font-weight="600" fill="#34d399" text-anchor="middle" opacity="1.0">merge_by_hash</text>
+<text x="254" y="1860" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">atualiza linha se o hash mudou (proposições)</text>
+<rect x="66" y="1875" width="176" height="22" rx="11" fill="#0e1a1f" stroke="#34d399" stroke-width="1.2" opacity="1.0"/>
+<text x="154" y="1890" font-family="Consolas, 'SF Mono', Menlo, monospace" font-size="12" font-weight="600" fill="#34d399" text-anchor="middle" opacity="1.0">scd2_by_hash</text>
+<text x="254" y="1890" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">versiona histórico valid_from/to (tramitações)</text>
+<rect x="632" y="1712" width="420" height="210" rx="14" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<text x="650" y="1742" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#fb923c" text-anchor="start" letter-spacing="1" opacity="1.0">MODOS DE EXECUÇÃO</text>
+<rect x="650" y="1754" width="384" height="44" rx="10" fill="#161d2a" stroke="#22d3ee" stroke-width="1.3" opacity="1.0"/>
+<text x="664" y="1774" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#22d3ee" text-anchor="start" opacity="1.0">Pandas local</text>
+<text x="664" y="1792" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">iteração rápida · CI sem cluster (~6s)</text>
+<rect x="650" y="1808" width="384" height="44" rx="10" fill="#161d2a" stroke="#cbd5e1" stroke-width="1.3" opacity="1.0"/>
+<text x="664" y="1828" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#cbd5e1" text-anchor="start" opacity="1.0">PySpark local</text>
+<text x="664" y="1846" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">paridade c/ Databricks (Delta OSS)</text>
+<rect x="650" y="1862" width="384" height="44" rx="10" fill="#161d2a" stroke="#fbbf24" stroke-width="1.3" opacity="1.0"/>
+<text x="664" y="1882" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#fbbf24" text-anchor="start" opacity="1.0">Databricks Premium</text>
+<text x="664" y="1900" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">Unity Catalog + Volumes + Workflows</text>
+<rect x="1076" y="1712" width="556" height="210" rx="14" fill="#11161f" stroke="#283344" stroke-width="1.5" opacity="1.0"/>
+<text x="1094" y="1742" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#a78bfa" text-anchor="start" letter-spacing="1" opacity="1.0">STACK &amp; ENGENHARIA</text>
+<rect x="1094" y="1748" width="139.2" height="24" rx="12" fill="#161d2a" stroke="#a78bfa" stroke-width="1.2" opacity="1.0"/>
+<text x="1163.6" y="1764" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.8" font-weight="500" fill="#e6edf3" text-anchor="middle" opacity="1.0">Python 3.11/3.12</text>
+<rect x="1243.2" y="1748" width="96.0" height="24" rx="12" fill="#161d2a" stroke="#a78bfa" stroke-width="1.2" opacity="1.0"/>
+<text x="1291.2" y="1764" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.8" font-weight="500" fill="#e6edf3" text-anchor="middle" opacity="1.0">Delta Lake</text>
+<rect x="1349.2" y="1748" width="74.4" height="24" rx="12" fill="#161d2a" stroke="#a78bfa" stroke-width="1.2" opacity="1.0"/>
+<text x="1386.4" y="1764" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.8" font-weight="500" fill="#e6edf3" text-anchor="middle" opacity="1.0">PySpark</text>
+<rect x="1433.6000000000001" y="1748" width="67.2" height="24" rx="12" fill="#161d2a" stroke="#a78bfa" stroke-width="1.2" opacity="1.0"/>
+<text x="1467.2" y="1764" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.8" font-weight="500" fill="#e6edf3" text-anchor="middle" opacity="1.0">pandas</text>
+<rect x="1510.8000000000002" y="1748" width="81.6" height="24" rx="12" fill="#161d2a" stroke="#a78bfa" stroke-width="1.2" opacity="1.0"/>
+<text x="1551.6000000000001" y="1764" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.8" font-weight="500" fill="#e6edf3" text-anchor="middle" opacity="1.0">tenacity</text>
+<rect x="1094" y="1782" width="67.2" height="24" rx="12" fill="#161d2a" stroke="#a78bfa" stroke-width="1.2" opacity="1.0"/>
+<text x="1127.6" y="1798" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.8" font-weight="500" fill="#e6edf3" text-anchor="middle" opacity="1.0">PyYAML</text>
+<rect x="1171.2" y="1782" width="67.2" height="24" rx="12" fill="#161d2a" stroke="#a78bfa" stroke-width="1.2" opacity="1.0"/>
+<text x="1204.8" y="1798" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.8" font-weight="500" fill="#e6edf3" text-anchor="middle" opacity="1.0">pytest</text>
+<rect x="1248.4" y="1782" width="52.8" height="24" rx="12" fill="#161d2a" stroke="#a78bfa" stroke-width="1.2" opacity="1.0"/>
+<text x="1274.8000000000002" y="1798" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.8" font-weight="500" fill="#e6edf3" text-anchor="middle" opacity="1.0">ruff</text>
+<rect x="1311.2" y="1782" width="146.4" height="24" rx="12" fill="#161d2a" stroke="#a78bfa" stroke-width="1.2" opacity="1.0"/>
+<text x="1384.4" y="1798" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="11.8" font-weight="500" fill="#e6edf3" text-anchor="middle" opacity="1.0">GitHub Actions CI</text>
+<text x="1094" y="1878" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">~2.180 linhas · 6 suítes de testes</text>
+<text x="1094" y="1898" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#93a1b5" text-anchor="start" opacity="1.0">4 ADRs · 3 runbooks · catálogo YAML</text>
+<line x1="48" y1="1966" x2="1632" y2="1966" stroke="#283344" stroke-width="1" opacity="1.0"/>
+<text x="48" y="1996" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#93a1b5" text-anchor="start" opacity="1.0">FAST-TRACK-ENGENHARIA-V3  ·  Projeto final — Upskill Tiller, Engenharia de Dados (T2)</text>
+<text x="1632" y="1996" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="400" fill="#93a1b5" text-anchor="end" opacity="1.0">Modelagem da estrutura  ·  jun/2026</text>
+</svg>

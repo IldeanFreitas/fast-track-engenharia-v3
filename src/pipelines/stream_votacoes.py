@@ -9,7 +9,7 @@ import argparse
 import json
 import logging
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from src.analytics.streaming_votacoes import TickMetrics, classifica_urgencia
@@ -63,7 +63,7 @@ def tick(client: CamaraAPIClient, run_id: str, max_pages: int = 1) -> TickMetric
                     "data_hora_registro": rec.get("dataHoraRegistro"),
                     "descricao": rec.get("descricao"),
                     "urgencia": urgencia,
-                    "detected_at": datetime.now(timezone.utc).isoformat(),
+                    "detected_at": datetime.now(UTC).isoformat(),
                     "run_id": run_id,
                 })
                 new += 1

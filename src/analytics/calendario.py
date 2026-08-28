@@ -66,7 +66,7 @@ def semanas_sem_atividade(silver: dict[str, pd.DataFrame]) -> pd.DataFrame:
     if densidade.empty:
         return pd.DataFrame(columns=["ano", "semana"])
 
-    pares = set(zip(densidade["ano"], densidade["semana"]))
+    pares = set(zip(densidade["ano"], densidade["semana"], strict=False))
     ano_min = int(densidade["ano"].min())
     ano_max = int(densidade["ano"].max())
     sem: list[dict] = []
